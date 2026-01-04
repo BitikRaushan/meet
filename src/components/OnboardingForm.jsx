@@ -1,8 +1,10 @@
-import { useState } from "react";
-import Button from "../components/ui/Button";
+import React, { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+import Button from './ui/Button';
+import InputField from './ui/InputField';
+import SelectField from './ui/SelectField';
 
-
-export default function Onboarding({ setUser, onDone }) {
+const OnboardingForm = ({ setGlobalUser, onComplete }) => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -65,3 +67,5 @@ export default function Onboarding({ setUser, onDone }) {
     </div>
   );
 };
+
+export default OnboardingForm;

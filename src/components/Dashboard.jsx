@@ -1,6 +1,8 @@
-import Button from "../components/ui/Button";
+import React from 'react';
+import { Heart, Trophy, Tent, BookOpen, Clock, Code, ArrowRight } from 'lucide-react';
+import Button from './ui/Button';
 
-export default function Dashboard({ user, setPage }) {
+const Dashboard = ({ user, setPage }) => {
   const categories = [
     { id: 'dating', title: 'Campus Dating', icon: <Heart className="fill-red-500 text-red-500" />, desc: 'Find that special connection.' },
     { id: 'hackathon', title: 'Hackathon Partner', icon: <Trophy className="text-amber-500" />, desc: 'Form the ultimate tech squad.' },
@@ -20,11 +22,11 @@ export default function Dashboard({ user, setPage }) {
           <Button onClick={() => setPage('matches')} className="bg-white text-zinc-900 px-10 h-14 rounded-2xl">Start Exploring <ArrowRight /></Button>
         </div>
         <div className="w-full lg:w-1/3 aspect-square bg-white/5 rounded-[2.5rem] flex items-center justify-center border border-white/10 shadow-inner">
-          
+           {/* <MapPin size={120} className="text-white/10" /> */}
            <img
-              src="b.png"
-              alt="college"
-              className="rounded-2xl shadow-md"
+             src="b.png"
+             alt="college"
+             className="rounded-xl"
            />
 
         </div>
@@ -44,3 +46,5 @@ export default function Dashboard({ user, setPage }) {
     </div>
   );
 };
+
+export default Dashboard;
